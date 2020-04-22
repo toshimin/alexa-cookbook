@@ -33,8 +33,6 @@ Alexa Hosted-Skillsを利用する場合は、以下の手順に従ってくだ�
 
 ### サンプルスキルの機能
 
-The demo will allow a very large set of items (colors) to be displayed inside of a pager or a sequence component. You can change the component being used in the document by selecting *pager* or *sequence* in the header. As you scroll, more items will be loaded in. This is handled in the lambda code through the use of the new directive,
-
 このサンプルスキルでは、非常に数の多いアイテム（色）のセットをページャーやシーケンスコンポーネントの中に表示しています。ヘッダーで *ページャ* か *シーケンス* を選択することで、ドキュメントで使われているコンポーネントを切り替えることができます。指で画面をタッチしてスクロールすると、次々とリストの他の項目が読み込まれます。ここ部分は、 `LoadIndexListDataRequestHandler`ハンドラーの中で、新しいディレクティブ [Alexa.Presentation.APL.SendIndexListData](https://developer.amazon.com/ja-JP/docs/alexa/alexa-presentation-language/apl-interface.html#sendindexlistdata-directive) を使って実装しています。
 
 
