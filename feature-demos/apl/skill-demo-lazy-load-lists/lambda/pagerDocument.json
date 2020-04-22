@@ -84,12 +84,12 @@
                                     {
                                         "type": "TextButton",
                                         "touchWrapperId": "PAGER_BUTTON",
-                                        "buttonText": "Pager"
+                                        "buttonText": "ページャ"
                                     },
                                     {
                                         "type": "TextButton",
                                         "touchWrapperId": "SEQUENCE_BUTTON",
-                                        "buttonText": "Sequence"
+                                        "buttonText": "シーケンス"
                                     }
                                 ]
                             }

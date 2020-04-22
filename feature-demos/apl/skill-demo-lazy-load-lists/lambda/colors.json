@@ -1,657 +1,657 @@
 [
   {
     "index": 0,
-    "name": "Alice Blue",
+    "name": "アリスブルー",
     "value": "#F0F8FF"
   },
   {
     "index": 1,
-    "name": "Antique White",
+    "name": "アンティークホワイト",
     "value": "#FAEBD7"
   },
   {
     "index": 2,
-    "name": "Aqua",
+    "name": "アクア",
     "value": "#00FFFF"
   },
   {
     "index": 3,
-    "name": "Aquamarine",
+    "name": "アクアマリン",
     "value": "#7FFFD4"
   },
   {
     "index": 4,
-    "name": "Azure",
+    "name": "アジュール",
     "value": "#F0FFFF"
   },
   {
     "index": 5,
-    "name": "Beige",
+    "name": "ベージュ",
     "value": "#F5F5DC"
   },
   {
     "index": 6,
-    "name": "Black",
+    "name": "ブラック",
     "value": "#000000"
   },
   {
     "index": 7,
-    "name": "Blue",
+    "name": "ブルー",
     "value": "#0000FF"
   },
   {
     "index": 8,
-    "name": "Blue Violet",
+    "name": "ブルーバイオレット",
     "value": "#8A2BE2"
   },
   {
     "index": 9,
-    "name": "Brown",
+    "name": "ブラウン",
     "value": "#A52A2A"
   },
   {
     "index": 10,
-    "name": "Cadet Blue",
+    "name": "カデットブルー",
     "value": "#5F9EA0"
   },
   {
     "index": 11,
-    "name": "Chartreuse",
+    "name": "シャルトリューズ",
     "value": "#7FFF00"
   },
   {
     "index": 12,
-    "name": "Chocolate",
+    "name": "チョコレート",
     "value": "#D2691E"
   },
   {
     "index": 13,
-    "name": "Coral",
+    "name": "コーラル",
     "value": "#FF7F50"
   },
   {
     "index": 14,
-    "name": "Cornflower Blue",
+    "name": "コーンフラワーブルー",
     "value": "#6495ED"
   },
   {
     "index": 15,
-    "name": "Crimson",
+    "name": "クリムゾン",
     "value": "#DC143C"
   },
   {
     "index": 16,
-    "name": "Dark Blue",
+    "name": "ダークブルー",
     "value": "#00008B"
   },
   {
     "index": 17,
-    "name": "Dark Cyan",
+    "name": "ダークシアン",
     "value": "#008B8B"
   },
   {
     "index": 18,
-    "name": "Dark Goldenrod",
+    "name": "ダークゴールデンロッド",
     "value": "#B8860B"
   },
   {
     "index": 19,
-    "name": "Dark Gray",
+    "name": "ダークグレイ",
     "value": "#A9A9A9"
   },
   {
     "index": 20,
-    "name": "Dark Green",
+    "name": "ダークグリーン",
     "value": "#006400"
   },
   {
     "index": 21,
-    "name": "Dark Khaki",
+    "name": "ダークカーキ",
     "value": "#BDB76B"
   },
   {
     "index": 22,
-    "name": "Dark Magenta",
+    "name": "ダークマゼンタ",
     "value": "#8B008B"
   },
   {
     "index": 23,
-    "name": "Dark Olive Green",
+    "name": "ダークオリーブグリーン",
     "value": "#556B2F"
   },
   {
     "index": 24,
-    "name": "Dark Orange",
+    "name": "ダークオレンジ",
     "value": "#FF8C00"
   },
   {
     "index": 25,
-    "name": "Dark Orchid",
+    "name": "ダークオーチャド",
     "value": "#9932CC"
   },
   {
     "index": 26,
-    "name": "Dark Red",
+    "name": "ダークレッド",
     "value": "#8B0000"
   },
   {
     "index": 27,
-    "name": "Dark Salmon",
+    "name": "ダークサーモン",
     "value": "#E9967A"
   },
   {
     "index": 28,
-    "name": "Dark Slate Gray",
+    "name": "ダークスレートグレー",
     "value": "#2F4F4F"
   },
   {
     "index": 29,
-    "name": "Dark Turquoise",
+    "name": "ダークターコイズ",
     "value": "#00CED1"
   },
   {
     "index": 30,
-    "name": "Dark Violet",
+    "name": "ダークバイオレット",
     "value": "#9400D3"
   },
   {
     "index": 31,
-    "name": "Deep Pink",
+    "name": "ディープピンク",
     "value": "#FF1493"
   },
   {
     "index": 32,
-    "name": "Deep Sky Blue",
+    "name": "ディープスカイブルー",
     "value": "#00BFFF"
   },
   {
     "index": 33,
-    "name": "Dim Gray",
+    "name": "ディムグレー",
     "value": "#696969"
   },
   {
     "index": 34,
-    "name": "Dodger Blue",
+    "name": "ドジャーブルー",
     "value": "#1E90FF"
   },
   {
     "index": 35,
-    "name": "Firebrick",
+    "name": "ファイアーブリック",
     "value": "#B22222"
   },
   {
     "index": 36,
-    "name": "Forest Green",
+    "name": "フォレストグリーン",
     "value": "#228B22"
   },
   {
     "index": 37,
-    "name": "Fuchsia",
+    "name": "フューシャ",
     "value": "#FF00FF"
   },
   {
     "index": 38,
-    "name": "Gainsboro",
+    "name": "ゲインズボロ",
     "value": "#DCDCDC"
   },
   {
     "index": 39,
-    "name": "Ghost White",
+    "name": "ゴーストホワイト",
     "value": "#F8F8FF"
   },
   {
     "index": 40,
-    "name": "Gold",
+    "name": "ゴールド",
     "value": "#FFD700"
   },
   {
     "index": 41,
-    "name": "Goldenrod",
+    "name": "ゴールデンロッド",
     "value": "#DAA520"
   },
   {
     "index": 42,
-    "name": "Gray",
+    "name": "グレー",
     "value": "#BEBEBE"
   },
   {
     "index": 43,
-    "name": "Web Gray",
+    "name": "ウェブグレー",
     "value": "#808080"
   },
   {
     "index": 44,
-    "name": "Green",
+    "name": "グリーン",
     "value": "#00FF00"
   },
   {
     "index": 45,
-    "name": "Web Green",
+    "name": "ウェブグリーン",
     "value": "#008000"
   },
   {
     "index": 46,
-    "name": "Green Yellow",
+    "name": "グリーンイエロー",
     "value": "#ADFF2F"
   },
   {
     "index": 47,
-    "name": "Honeydew",
+    "name": "ハニーデュー",
     "value": "#F0FFF0"
   },
   {
     "index": 48,
-    "name": "Hot Pink",
+    "name": "ホットピンク",
     "value": "#FF69B4"
   },
   {
     "index": 49,
-    "name": "Indian Red",
+    "name": "インディアンレッド",
     "value": "#CD5C5C"
   },
   {
     "index": 50,
-    "name": "Indigo",
+    "name": "インディゴ",
     "value": "#4B0082"
   },
   {
     "index": 51,
-    "name": "Ivory",
+    "name": "アイボリー",
     "value": "#FFFFF0"
   },
   {
     "index": 52,
-    "name": "Khaki",
+    "name": "カーキ",
     "value": "#F0E68C"
   },
   {
     "index": 53,
-    "name": "Lavender",
+    "name": "ラベンダー",
     "value": "#E6E6FA"
   },
   {
     "index": 54,
-    "name": "Lavender Blush",
+    "name": "ラベンダーブラッシュ",
     "value": "#FFF0F5"
   },
   {
     "index": 55,
-    "name": "Lawn Green",
+    "name": "ローングリーン",
     "value": "#7CFC00"
   },
   {
     "index": 56,
-    "name": "Lemon Chiffon",
+    "name": "レモンシフォン",
     "value": "#FFFACD"
   },
   {
     "index": 57,
-    "name": "Light Blue",
+    "name": "ライトブルー",
     "value": "#ADD8E6"
   },
   {
     "index": 58,
-    "name": "Light Coral",
+    "name": "ライトコーラル",
     "value": "#F08080"
   },
   {
     "index": 59,
-    "name": "Light Cyan",
+    "name": "ライトシアン",
     "value": "#E0FFFF"
   },
   {
     "index": 60,
-    "name": "Light Goldenrod",
+    "name": "ライトゴールデンロッド",
     "value": "#FAFAD2"
   },
   {
     "index": 61,
-    "name": "Light Gray",
+    "name": "ライトグレー",
     "value": "#D3D3D3"
   },
   {
     "index": 62,
-    "name": "Light Green",
+    "name": "ライトグリーン",
     "value": "#90EE90"
   },
   {
     "index": 63,
-    "name": "Light Pink",
+    "name": "ライトピンク",
     "value": "#FFB6C1"
   },
   {
     "index": 64,
-    "name": "Light Salmon",
+    "name": "ライトサーモン",
     "value": "#FFA07A"
   },
   {
     "index": 65,
-    "name": "Light Sea Green",
+    "name": "ライトシーグリーン",
     "value": "#20B2AA"
   },
   {
     "index": 66,
-    "name": "Light Sky Blue",
+    "name": "ライトスカイブルー",
     "value": "#87CEFA"
   },
   {
     "index": 67,
-    "name": "Light Slate Gray",
+    "name": "ライトスレートグレー",
     "value": "#778899"
   },
   {
     "index": 68,
-    "name": "Light Steel Blue",
+    "name": "ライトスティールブルー",
     "value": "#B0C4DE"
   },
   {
     "index": 69,
-    "name": "Light Yellow",
+    "name": "ライトイエロー",
     "value": "#FFFFE0"
   },
   {
     "index": 70,
-    "name": "Lime Green",
+    "name": "ライムグリーン",
     "value": "#32CD32"
   },
   {
     "index": 71,
-    "name": "Maroon",
+    "name": "マルーン",
     "value": "#B03060"
   },
   {
     "index": 72,
-    "name": "Web Maroon",
+    "name": "ウェブマルーン",
     "value": "#800000"
   },
   {
     "index": 73,
-    "name": "Medium Aquamarine",
+    "name": "ミディアムアクアマリン",
     "value": "#66CDAA"
   },
   {
     "index": 74,
-    "name": "Medium Blue",
+    "name": "ミディアムブルー",
     "value": "#0000CD"
   },
   {
     "index": 75,
-    "name": "Medium Orchid",
+    "name": "ミディアムオーキッド",
     "value": "#BA55D3"
   },
   {
     "index": 76,
-    "name": "Medium Purple",
+    "name": "ミディアムパープル",
     "value": "#9370DB"
   },
   {
     "index": 77,
-    "name": "Medium Sea Green",
+    "name": "ミディアムシーグリーン",
     "value": "#3CB371"
   },
   {
     "index": 78,
-    "name": "Medium Spring Green",
+    "name": "ミディアムスプリンググリーン",
     "value": "#00FA9A"
   },
   {
     "index": 79,
-    "name": "Medium Turquoise",
+    "name": "ミディアムターコイズ",
     "value": "#48D1CC"
   },
   {
     "index": 80,
-    "name": "Medium Violet Red",
+    "name": "ミディアムバイオレットレッド",
     "value": "#C71585"
   },
   {
     "index": 81,
-    "name": "Midnight Blue",
+    "name": "ミッドナイトブルー",
     "value": "#191970"
   },
   {
     "index": 82,
-    "name": "Mint Cream",
+    "name": "ミントクリーム",
     "value": "#F5FFFA"
   },
   {
     "index": 83,
-    "name": "Misty Rose",
+    "name": "ミスティローズ",
     "value": "#FFE4E1"
   },
   {
     "index": 84,
-    "name": "Navajo White",
+    "name": "ナバホホワイト",
     "value": "#FFDEAD"
   },
   {
     "index": 85,
-    "name": "Navy Blue",
+    "name": "ネイビーブルー",
     "value": "#000080"
   },
   {
     "index": 86,
-    "name": "Old Lace",
+    "name": "オールドレース",
     "value": "#FDF5E6"
   },
   {
     "index": 87,
-    "name": "Olive",
+    "name": "オリーブ",
     "value": "#808000"
   },
   {
     "index": 88,
-    "name": "Olive Drab",
+    "name": "オリーブドラブ",
     "value": "#6B8E23"
   },
   {
     "index": 89,
-    "name": "Orange",
+    "name": "オレンジ",
     "value": "#FFA500"
   },
   {
     "index": 90,
-    "name": "Orange Red",
+    "name": "オレンジレッド",
     "value": "#FF4500"
   },
   {
     "index": 91,
-    "name": "Orchid",
+    "name": "オーキッド",
     "value": "#DA70D6"
   },
   {
     "index": 92,
-    "name": "Pale Goldenrod",
+    "name": "ペールゴールデンロッド",
     "value": "#EEE8AA"
   },
   {
     "index": 93,
-    "name": "Pale Green",
+    "name": "ペールグリーン",
     "value": "#98FB98"
   },
   {
     "index": 94,
-    "name": "Pale Turquoise",
+    "name": "ペールターコイズ",
     "value": "#AFEEEE"
   },
   {
     "index": 95,
-    "name": "Pale Violet Red",
+    "name": "ペールバイオレットレッド",
     "value": "#DB7093"
   },
   {
     "index": 96,
-    "name": "Papaya Whip",
+    "name": "パパイヤホイップ",
     "value": "#FFEFD5"
   },
   {
     "index": 97,
-    "name": "Peach Puff",
+    "name": "ピーチパフ",
     "value": "#FFDAB9"
   },
   {
     "index": 98,
-    "name": "Peru",
+    "name": "ペルー",
     "value": "#CD853F"
   },
   {
     "index": 99,
-    "name": "Pink",
+    "name": "ピンク",
     "value": "#FFC0CB"
   },
   {
     "index": 100,
-    "name": "Plum",
+    "name": "プラム",
     "value": "#DDA0DD"
   },
   {
     "index": 101,
-    "name": "Powder Blue",
+    "name": "パウダーブルー",
     "value": "#B0E0E6"
   },
   {
     "index": 102,
-    "name": "Purple",
+    "name": "パープル",
     "value": "#A020F0"
   },
   {
     "index": 103,
-    "name": "Web Purple",
+    "name": "ウェブパープル",
     "value": "#800080"
   },
   {
     "index": 104,
-    "name": "Rebecca Purple",
+    "name": "レベッカパープル",
     "value": "#663399"
   },
   {
     "index": 105,
-    "name": "Red",
+    "name": "レッド",
     "value": "#FF0000"
   },
   {
     "index": 106,
-    "name": "Rosy Brown",
+    "name": "ロージーブラウン",
     "value": "#BC8F8F"
   },
   {
     "index": 107,
-    "name": "Royal Blue",
+    "name": "ロイヤルブルー",
     "value": "#4169E1"
   },
   {
     "index": 108,
-    "name": "Salmon",
+    "name": "サーモン",
     "value": "#FA8072"
   },
   {
     "index": 109,
-    "name": "Sandy Brown",
+    "name": "サンディブラウン",
     "value": "#F4A460"
   },
   {
     "index": 110,
-    "name": "Sea Green",
+    "name": "シーグリーン",
     "value": "#2E8B57"
   },
   {
     "index": 111,
-    "name": "Seashell",
+    "name": "シーシェル",
     "value": "#FFF5EE"
   },
   {
     "index": 112,
-    "name": "Sienna",
+    "name": "シエナ",
     "value": "#A0522D"
   },
   {
     "index": 113,
-    "name": "Silver",
+    "name": "シルバー",
     "value": "#C0C0C0"
   },
   {
     "index": 114,
-    "name": "Sky Blue",
+    "name": "スカイブルー",
     "value": "#87CEEB"
   },
   {
     "index": 115,
-    "name": "Slate Blue",
+    "name": "スレートブルー",
     "value": "#6A5ACD"
   },
   {
     "index": 116,
-    "name": "Slate Gray",
+    "name": "スレートグレー",
     "value": "#708090"
   },
   {
     "index": 117,
-    "name": "Snow",
+    "name": "スノー",
     "value": "#FFFAFA"
   },
   {
     "index": 118,
-    "name": "Spring Green",
+    "name": "スプリンググリーン",
     "value": "#00FF7F"
   },
   {
     "index": 119,
-    "name": "Steel Blue",
+    "name": "スチールブルー",
     "value": "#4682B4"
   },
   {
     "index": 120,
-    "name": "Tan",
+    "name": "タン",
     "value": "#D2B48C"
   },
   {
     "index": 121,
-    "name": "Teal",
+    "name": "ティール",
     "value": "#008080"
   },
   {
     "index": 122,
-    "name": "Thistle",
+    "name": "アザミ",
     "value": "#D8BFD8"
   },
   {
     "index": 123,
-    "name": "Tomato",
+    "name": "トマト",
     "value": "#FF6347"
   },
   {
     "index": 124,
-    "name": "Turquoise",
+    "name": "ターコイズ",
     "value": "#40E0D0"
   },
   {
     "index": 125,
-    "name": "Violet",
+    "name": "バイオレット",
     "value": "#EE82EE"
   },
   {
     "index": 126,
-    "name": "Wheat",
+    "name": "ウイート",
     "value": "#F5DEB3"
   },
   {
     "index": 127,
-    "name": "White",
+    "name": "ホワイト",
     "value": "#FFFFFF"
   },
   {
     "index": 128,
-    "name": "White Smoke",
+    "name": "ホワイトスモーク",
     "value": "#F5F5F5"
   },
   {
     "index": 129,
-    "name": "Yellow",
+    "name": "イエロー",
     "value": "#FFFF00"
   },
   {
     "index": 130,
-    "name": "Yellow Green",
+    "name": "イエローグリーン",
     "value": "#9ACD32"
   }
 ]

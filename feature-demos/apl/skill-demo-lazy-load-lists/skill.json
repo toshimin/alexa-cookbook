@@ -3,7 +3,8 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "uri": "arn:aws:lambda:us-east-1:910734725388:function:882d9b0d-161f-4b0a-a10e-1993deb85174:Release_0"
+          "sourceDir": "lambda",
+          "uri": "skill-demo-lazy-load-lists"
         },
         "interfaces": [
           {
@@ -56,7 +57,7 @@
     },
     "publishingInformation": {
       "locales": {
-        "en-US": {
+        "ja-JP": {
           "name": "Color Picker Demo"
         }
       }

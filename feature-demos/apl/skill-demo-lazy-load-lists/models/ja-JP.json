@@ -1,0 +1,875 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "カラーピッカー",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "ChangeColorIntent",
+                    "samples": [
+                        "{color} を変えて",
+                        "{color} を選択",
+                        "{color} にして",
+                        "{color}"
+                    ],
+                    "slots": [
+                        {
+                            "name": "color",
+                            "type": "Colors"
+                        }
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "ヘルプ"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "Colors",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "アリスブルー"
+                            },
+                            "id": 0
+                        },
+                        {
+                            "name": {
+                                "value": "アンティークホワイト"
+                            },
+                            "id": 1
+                        },
+                        {
+                            "name": {
+                                "value": "アクア"
+                            },
+                            "id": 2
+                        },
+                        {
+                            "name": {
+                                "value": "アクアマリン"
+                            },
+                            "id": 3
+                        },
+                        {
+                            "name": {
+                                "value": "アジュール"
+                            },
+                            "id": 4
+                        },
+                        {
+                            "name": {
+                                "value": "ベージュ"
+                            },
+                            "id": 5
+                        },
+                        {
+                            "name": {
+                                "value": "ブラック"
+                            },
+                            "id": 6
+                        },
+                        {
+                            "name": {
+                                "value": "ブルー"
+                            },
+                            "id": 7
+                        },
+                        {
+                            "name": {
+                                "value": "ブルーバイオレット"
+                            },
+                            "id": 8
+                        },
+                        {
+                            "name": {
+                                "value": "ブラウン"
+                            },
+                            "id": 9
+                        },
+                        {
+                            "name": {
+                                "value": "カデットブルー"
+                            },
+                            "id": 10
+                        },
+                        {
+                            "name": {
+                                "value": "シャルトリューズ"
+                            },
+                            "id": 11
+                        },
+                        {
+                            "name": {
+                                "value": "チョコレート"
+                            },
+                            "id": 12
+                        },
+                        {
+                            "name": {
+                                "value": "コーラル"
+                            },
+                            "id": 13
+                        },
+                        {
+                            "name": {
+                                "value": "コーンフラワーブルー"
+                            },
+                            "id": 14
+                        },
+                        {
+                            "name": {
+                                "value": "クリムゾン"
+                            },
+                            "id": 15
+                        },
+                        {
+                            "name": {
+                                "value": "ダークブルー"
+                            },
+                            "id": 16
+                        },
+                        {
+                            "name": {
+                                "value": "ダークシアン"
+                            },
+                            "id": 17
+                        },
+                        {
+                            "name": {
+                                "value": "ダークゴールデンロッド"
+                            },
+                            "id": 18
+                        },
+                        {
+                            "name": {
+                                "value": "ダークグレイ"
+                            },
+                            "id": 19
+                        },
+                        {
+                            "name": {
+                                "value": "ダークグリーン"
+                            },
+                            "id": 20
+                        },
+                        {
+                            "name": {
+                                "value": "ダークカーキ"
+                            },
+                            "id": 21
+                        },
+                        {
+                            "name": {
+                                "value": "ダークマゼンタ"
+                            },
+                            "id": 22
+                        },
+                        {
+                            "name": {
+                                "value": "ダークオリーブグリーン"
+                            },
+                            "id": 23
+                        },
+                        {
+                            "name": {
+                                "value": "ダークオレンジ"
+                            },
+                            "id": 24
+                        },
+                        {
+                            "name": {
+                                "value": "ダークオーチャド"
+                            },
+                            "id": 25
+                        },
+                        {
+                            "name": {
+                                "value": "ダークレッド"
+                            },
+                            "id": 26
+                        },
+                        {
+                            "name": {
+                                "value": "ダークサーモン"
+                            },
+                            "id": 27
+                        },
+                        {
+                            "name": {
+                                "value": "ダークスレートグレー"
+                            },
+                            "id": 28
+                        },
+                        {
+                            "name": {
+                                "value": "ダークターコイズ"
+                            },
+                            "id": 29
+                        },
+                        {
+                            "name": {
+                                "value": "ダークバイオレット"
+                            },
+                            "id": 30
+                        },
+                        {
+                            "name": {
+                                "value": "ディープピンク"
+                            },
+                            "id": 31
+                        },
+                        {
+                            "name": {
+                                "value": "ディープスカイブルー"
+                            },
+                            "id": 32
+                        },
+                        {
+                            "name": {
+                                "value": "ディムグレー"
+                            },
+                            "id": 33
+                        },
+                        {
+                            "name": {
+                                "value": "ドジャーブルー"
+                            },
+                            "id": 34
+                        },
+                        {
+                            "name": {
+                                "value": "ファイアーブリック"
+                            },
+                            "id": 35
+                        },
+                        {
+                            "name": {
+                                "value": "フォレストグリーン"
+                            },
+                            "id": 36
+                        },
+                        {
+                            "name": {
+                                "value": "フューシャ"
+                            },
+                            "id": 37
+                        },
+                        {
+                            "name": {
+                                "value": "ゲインズボロ"
+                            },
+                            "id": 38
+                        },
+                        {
+                            "name": {
+                                "value": "ゴーストホワイト"
+                            },
+                            "id": 39
+                        },
+                        {
+                            "name": {
+                                "value": "ゴールド"
+                            },
+                            "id": 40
+                        },
+                        {
+                            "name": {
+                                "value": "ゴールデンロッド"
+                            },
+                            "id": 41
+                        },
+                        {
+                            "name": {
+                                "value": "グレー"
+                            },
+                            "id": 42
+                        },
+                        {
+                            "name": {
+                                "value": "ウェブグレー"
+                            },
+                            "id": 43
+                        },
+                        {
+                            "name": {
+                                "value": "グリーン"
+                            },
+                            "id": 44
+                        },
+                        {
+                            "name": {
+                                "value": "ウェブグリーン"
+                            },
+                            "id": 45
+                        },
+                        {
+                            "name": {
+                                "value": "グリーンイエロー"
+                            },
+                            "id": 46
+                        },
+                        {
+                            "name": {
+                                "value": "ハニーデュー"
+                            },
+                            "id": 47
+                        },
+                        {
+                            "name": {
+                                "value": "ホットピンク"
+                            },
+                            "id": 48
+                        },
+                        {
+                            "name": {
+                                "value": "インディアンレッド "
+                            },
+                            "id": 49
+                        },
+                        {
+                            "name": {
+                                "value": "インディゴ"
+                            },
+                            "id": 50
+                        },
+                        {
+                            "name": {
+                                "value": "アイボリー"
+                            },
+                            "id": 51
+                        },
+                        {
+                            "name": {
+                                "value": "カーキ"
+                            },
+                            "id": 52
+                        },
+                        {
+                            "name": {
+                                "value": "ラベンダー"
+                            },
+                            "id": 53
+                        },
+                        {
+                            "name": {
+                                "value": "ラベンダーブラッシュ"
+                            },
+                            "id": 54
+                        },
+                        {
+                            "name": {
+                                "value": "ローングリーン"
+                            },
+                            "id": 55
+                        },
+                        {
+                            "name": {
+                                "value": "レモンシフォン"
+                            },
+                            "id": 56
+                        },
+                        {
+                            "name": {
+                                "value": "ライトブルー"
+                            },
+                            "id": 57
+                        },
+                        {
+                            "name": {
+                                "value": "ライトコーラル"
+                            },
+                            "id": 58
+                        },
+                        {
+                            "name": {
+                                "value": "ライトシアン"
+                            },
+                            "id": 59
+                        },
+                        {
+                            "name": {
+                                "value": "ライトゴールデンロッド"
+                            },
+                            "id": 60
+                        },
+                        {
+                            "name": {
+                                "value": "ライトグレー"
+                            },
+                            "id": 61
+                        },
+                        {
+                            "name": {
+                                "value": "ライトグリーン"
+                            },
+                            "id": 62
+                        },
+                        {
+                            "name": {
+                                "value": "ライトピンク"
+                            },
+                            "id": 63
+                        },
+                        {
+                            "name": {
+                                "value": "ライトサーモン"
+                            },
+                            "id": 64
+                        },
+                        {
+                            "name": {
+                                "value": "ライトシーグリーン"
+                            },
+                            "id": 65
+                        },
+                        {
+                            "name": {
+                                "value": "ライトスカイブルー"
+                            },
+                            "id": 66
+                        },
+                        {
+                            "name": {
+                                "value": "ライトスレートグレー"
+                            },
+                            "id": 67
+                        },
+                        {
+                            "name": {
+                                "value": "ライトスティールブルー"
+                            },
+                            "id": 68
+                        },
+                        {
+                            "name": {
+                                "value": "ライトイエロー"
+                            },
+                            "id": 69
+                        },
+                        {
+                            "name": {
+                                "value": "ライムグリーン"
+                            },
+                            "id": 70
+                        },
+                        {
+                            "name": {
+                                "value": "マルーン"
+                            },
+                            "id": 71
+                        },
+                        {
+                            "name": {
+                                "value": "ウェブマルーン"
+                            },
+                            "id": 72
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムアクアマリン"
+                            },
+                            "id": 73
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムブルー"
+                            },
+                            "id": 74
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムオーキッド"
+                            },
+                            "id": 75
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムパープル"
+                            },
+                            "id": 76
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムシーグリーン"
+                            },
+                            "id": 77
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムスプリンググリーン"
+                            },
+                            "id": 78
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムターコイズ"
+                            },
+                            "id": 79
+                        },
+                        {
+                            "name": {
+                                "value": "ミディアムバイオレットレッド"
+                            },
+                            "id": 80
+                        },
+                        {
+                            "name": {
+                                "value": "ミッドナイトブルー"
+                            },
+                            "id": 81
+                        },
+                        {
+                            "name": {
+                                "value": "ミントクリーム"
+                            },
+                            "id": 82
+                        },
+                        {
+                            "name": {
+                                "value": "ミスティローズ"
+                            },
+                            "id": 83
+                        },
+                        {
+                            "name": {
+                                "value": "ナバホホワイト"
+                            },
+                            "id": 84
+                        },
+                        {
+                            "name": {
+                                "value": "ネイビーブルー"
+                            },
+                            "id": 85
+                        },
+                        {
+                            "name": {
+                                "value": "オールドレース"
+                            },
+                            "id": 86
+                        },
+                        {
+                            "name": {
+                                "value": "オリーブ"
+                            },
+                            "id": 87
+                        },
+                        {
+                            "name": {
+                                "value": "オリーブドラブ"
+                            },
+                            "id": 88
+                        },
+                        {
+                            "name": {
+                                "value": "オレンジ"
+                            },
+                            "id": 89
+                        },
+                        {
+                            "name": {
+                                "value": "オレンジレッド"
+                            },
+                            "id": 90
+                        },
+                        {
+                            "name": {
+                                "value": "オーキッド"
+                            },
+                            "id": 91
+                        },
+                        {
+                            "name": {
+                                "value": "ペールゴールデンロッド"
+                            },
+                            "id": 92
+                        },
+                        {
+                            "name": {
+                                "value": "ペールグリーン"
+                            },
+                            "id": 93
+                        },
+                        {
+                            "name": {
+                                "value": "ペールターコイズ"
+                            },
+                            "id": 94
+                        },
+                        {
+                            "name": {
+                                "value": "ペールバイオレットレッド"
+                            },
+                            "id": 95
+                        },
+                        {
+                            "name": {
+                                "value": "パパイヤホイップ"
+                            },
+                            "id": 96
+                        },
+                        {
+                            "name": {
+                                "value": "ピーチパフ"
+                            },
+                            "id": 97
+                        },
+                        {
+                            "name": {
+                                "value": "ペルー"
+                            },
+                            "id": 98
+                        },
+                        {
+                            "name": {
+                                "value": "ピンク"
+                            },
+                            "id": 99
+                        },
+                        {
+                            "name": {
+                                "value": "プラム"
+                            },
+                            "id": 100
+                        },
+                        {
+                            "name": {
+                                "value": "パウダーブルー"
+                            },
+                            "id": 101
+                        },
+                        {
+                            "name": {
+                                "value": "パープル"
+                            },
+                            "id": 102
+                        },
+                        {
+                            "name": {
+                                "value": "ウェブパープル"
+                            },
+                            "id": 103
+                        },
+                        {
+                            "name": {
+                                "value": "レベッカパープル"
+                            },
+                            "id": 104
+                        },
+                        {
+                            "name": {
+                                "value": "レッド"
+                            },
+                            "id": 105
+                        },
+                        {
+                            "name": {
+                                "value": "ロージーブラウン"
+                            },
+                            "id": 106
+                        },
+                        {
+                            "name": {
+                                "value": "ロイヤルブルー"
+                            },
+                            "id": 107
+                        },
+                        {
+                            "name": {
+                                "value": "サーモン"
+                            },
+                            "id": 108
+                        },
+                        {
+                            "name": {
+                                "value": "サンディブラウン"
+                            },
+                            "id": 109
+                        },
+                        {
+                            "name": {
+                                "value": "シーグリーン"
+                            },
+                            "id": 110
+                        },
+                        {
+                            "name": {
+                                "value": "シーシェル"
+                            },
+                            "id": 111
+                        },
+                        {
+                            "name": {
+                                "value": "シエナ"
+                            },
+                            "id": 112
+                        },
+                        {
+                            "name": {
+                                "value": "シルバー"
+                            },
+                            "id": 113
+                        },
+                        {
+                            "name": {
+                                "value": "スカイブルー"
+                            },
+                            "id": 114
+                        },
+                        {
+                            "name": {
+                                "value": "スレートブルー"
+                            },
+                            "id": 115
+                        },
+                        {
+                            "name": {
+                                "value": "スレートグレー"
+                            },
+                            "id": 116
+                        },
+                        {
+                            "name": {
+                                "value": "スノー"
+                            },
+                            "id": 117
+                        },
+                        {
+                            "name": {
+                                "value": "スプリンググリーン"
+                            },
+                            "id": 118
+                        },
+                        {
+                            "name": {
+                                "value": "スチールブルー"
+                            },
+                            "id": 119
+                        },
+                        {
+                            "name": {
+                                "value": "タン"
+                            },
+                            "id": 120
+                        },
+                        {
+                            "name": {
+                                "value": "ティール"
+                            },
+                            "id": 121
+                        },
+                        {
+                            "name": {
+                                "value": "アザミ"
+                            },
+                            "id": 122
+                        },
+                        {
+                            "name": {
+                                "value": "トマト"
+                            },
+                            "id": 123
+                        },
+                        {
+                            "name": {
+                                "value": "ターコイズ"
+                            },
+                            "id": 124
+                        },
+                        {
+                            "name": {
+                                "value": "バイオレット"
+                            },
+                            "id": 125
+                        },
+                        {
+                            "name": {
+                                "value": "ウイート"
+                            },
+                            "id": 126
+                        },
+                        {
+                            "name": {
+                                "value": "ホワイト"
+                            },
+                            "id": 127
+                        },
+                        {
+                            "name": {
+                                "value": "ホワイトスモーク"
+                            },
+                            "id": 128
+                        },
+                        {
+                            "name": {
+                                "value": "イエロー"
+                            },
+                            "id": 129
+                        },
+                        {
+                            "name": {
+                                "value": "イエローグリーン"
+                            },
+                            "id": 130
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

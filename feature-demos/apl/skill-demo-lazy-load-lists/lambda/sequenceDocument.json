@@ -17,7 +17,7 @@
     "layouts": {
         "TextButton": {
             "description": "A basic text Button",
-            "parameters":[
+            "parameters": [
                 {
                     "name": "touchWrapperId",
                     "type": "string"
@@ -64,7 +64,7 @@
                     {
                         "type": "Frame",
                         "width": "100vw",
-                        "height":"15vh",
+                        "height": "15vh",
                         "paddingTop": "2vh",
                         "paddingBottom": "2vh",
                         "id": "HEADER_CONTAINER",
@@ -73,25 +73,23 @@
                             {
                                 "type": "Container",
                                 "direction": "row",
-                                "alignItems":"center",
+                                "alignItems": "center",
                                 "items": [
                                     {
                                         "type": "Text",
                                         "paddingLeft": "2vw",
                                         "text": "${staticDataSource.headerTitle}:",
                                         "fontSize": "40dp"
-                                    }, 
+                                    },
                                     {
                                         "type": "TextButton",
                                         "touchWrapperId": "PAGER_BUTTON",
-                                        "buttonText":"Pager"
-                                        
+                                        "buttonText": "ページャ"
                                     },
                                     {
-                                        "type":"TextButton",
+                                        "type": "TextButton",
                                         "touchWrapperId": "SEQUENCE_BUTTON",
-                                        "buttonText":"Sequence"
-                                        
+                                        "buttonText": "シーケンス"
                                     }
                                 ]
                             }
@@ -102,7 +100,7 @@
                         "height": "80vh",
                         "data": "${colorDynamicSource}",
                         "numbered": true,
-                        "id":"SOURCE_LIST",
+                        "id": "SOURCE_LIST",
                         "items": {
                             "type": "Frame",
                             "width": "100vw",
