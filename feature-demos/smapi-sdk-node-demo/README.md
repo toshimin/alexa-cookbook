@@ -1,29 +1,34 @@
-# Alexa Skills Management API (SMAPI) SDK Demo for Node.js 
-This demonstration shows how to set up a Node.js project with the Alexa Skills Management API SDK and run some sample API calls to list skills for a vendor ID or get analytics data with the [Alexa Skill Metrics API](https://developer.amazon.com/en-US/docs/alexa/smapi/metrics-api.html/). 
+# Alexa Skills Management API (SMAPI) SDK　のデモ (Node.js) 
+このデモでは、Alexa Skills Management API SDKを使ってNode.jsプロジェクトを設定し、[Alexa Skill Metrics API](https://developer.amazon.com/ja-JP/docs/alexa/smapi/metrics-api.html/)を使って開発者(vendor ID)が保有するスキルを一覧表示したり、レポートデータを取得したりするためのサンプルAPIコールを実行する方法を紹介します。
 
-## Prerequisites / Dependencies
+## 前提要件
 * Node.js and NPM (https://nodejs.com)
 * An Amazon Developer Account (https://developer.amazon.com)
 * The ASK CLI (https://www.npmjs.com/package/ask-cli)
 
-## Setup
-After you've set up the prerequisites, you'll need to get your authentication information. This is comprised of three steps.
+## セットアップ
+前提要件のセットアップが完了したら、認可情報を取得する必要があります。これには3つのステップがあります。
 
-### Install the Node modules
+### Node.js モジュールのインストール
 
-Run `npm install` from the command line in the same directory with the demo files.
+コマンドラインでデモファイルと同じディレクトリに移動し、`npm install` コマンドを実行します。
 
-### Register a Login with Amazon Security Profile for a Web App
+### Webアプリ用 Login with Amazon セキュリティプロファイルの登録
 
-Make sure you're logged into developer.amazon.com with the same account you use for developing Alexa Skills.
+Alexaスキルの開発に使用したアカウントと同じアカウントでdeveloper.amazon.comにログインしていることを確認してください。
 
-Follow the instructions here: https://developer.amazon.com/docs/login-with-amazon/register-web.html#create-a-new-security-profile
+以下のページの手順に従って、Login with Amazonのセキュリティプロファイルを作成してください。
 
-You'll need the client ID and secret key from the profile. Add them to the tokens.js file. You can copy and paste them from there in the next step. 
+* [新しいセキュリティプロファイルを作成する](https://developer.amazon.com/ja/docs/login-with-amazon/register-web.html#create-a-new-security-profile)
 
-### Get an access token for the API
+プロファイルからクライアントIDとシークレットキーを入手します。それらをtokens.jsファイルに追加します。次のステップでは、それらの情報をコピペして利用します。
 
-Using the ASK CLI, run: `ask util generate-lwa-tokens`. You will be asked to provide the Client ID and Client Secret keys from the previous step. This will return the following JSON with a Refresh Token:
+### APIアクセストークンの取得
+
+ASK CLIで、`ask util generate-lwa-tokens`コマンドを実行します。コマンドを実行すると前のステップで入手したクライアントIDとシークレットキーの入力が要求されます。
+
+コマンドが実行されると、以下のJSONデータが返されます。リフレッシュトークンが含まれます。
+
 ```javascript
 {
   "access_token": "ACCESS_TOKEN",
@@ -34,24 +39,24 @@ Using the ASK CLI, run: `ask util generate-lwa-tokens`. You will be asked to pro
 }
 ```
 
-Add that information to your tokens.js file for easy access.
+簡単にアクセスできるように、tokens.js にこの情報も追加します。
 
-## Running the Demos
+## デモの実行
 
-### List your Alexa skills for the account
+### アカウントが保有するAlexaスキルのリスト
 
-Go to https://developer.amazon.com/mycid.html to get your VendorID. Add it to your tokens.js file.
+https://developer.amazon.com/mycid.html にアクセスし、ご自分の Vendor ID を取得します。これもtokens.js ファイルに追加します。
 
-From the command line, run `node listSkills.js`. It will output a JSON list of your skills.
+コマンドラインで、 `node listSkills.js` コマンドを実行します。すると、あなたのスキルの一覧がJSON形式で出力されます。
 
-### Get metrics data
+### レポートデータの取得
 
-You'll need the skill ID from one of your skills. This can be found in the Skills Developer Console. Under each skill in your skill list, there's a small link to view the skill ID.
+ご自分のスキルのうちの一つを選び、スキルIDを取得します。スキルIDは、Alexaの開発者コンソールから取得できます。スキル一覧ページの各スキル名の下に小さなリンクがあります。それをクリックするとスキルIDが表示されます。
 
-The [Alexa Metrics API documentation](https://developer.amazon.com/en-US/docs/alexa/smapi/metrics-api.html/) explains the different values you can (or must) use in this API call.
+[Alexa レポートAPIの技術文書](https://developer.amazon.com/ja-JP/docs/alexa/smapi/metrics-api.html) では、APIコールで使用できる（もしくは使用しなければならない）値の解説があります。
 
-## Resources
+## 関連リソース
 
 SMAPI SDK: https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs/tree/2.0.x/ask-smapi-sdk
-Metrics API: https://developer.amazon.com/en-US/docs/alexa/smapi/metrics-api.html
+レポートAPI: https://developer.amazon.com/ja-JP/docs/alexa/smapi/metrics-api.html
 
