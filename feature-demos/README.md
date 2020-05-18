@@ -20,9 +20,9 @@ The [Alexa SMAPI SDK demonstration for Node](smapi-sdk-node-demo/) shows how to 
 
 ### Other Areas
 
-[Accessing Lists](./skill-demo-list-access) demonstrates how to access the list API for reading and writing to Alexa's lists.
+[Accessing Lists](./list-api/skill-demo-list-access) demonstrates how to access the list API for reading and writing to Alexa's lists.
 
-[List events](./skill-demo-list-events) demonstrates how to recieve skill, list and item level events.
+[List events](./list-api/skill-demo-list-events) demonstrates how to recieve skill, list and item level events.
 
 [Progressive Response](./skill-demo-progressive-response) demonstrates how to deliver a progressive response to a customer.
 

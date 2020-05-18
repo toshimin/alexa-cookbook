@@ -116,7 +116,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 Note the HTTPS URL provided (in the above, that would be `https://abc123.ngrok.io`).
 
-To forward requests from Alexa through ngrok to your local machine, you’ll need to add the `uri` attribute with the above ngrok-provided HTTPS URL, and a `sslCertificateType` attribute set to `Wildcard` in your `skill.json` file:
+To forward requests from Alexa through ngrok to your local machine, you’ll need to add the `uri` attribute with the above ngrok-provided HTTPS URL, and a `sslCertificateType` attribute set to `Wildcard` in your skill's manifest file (`YOUR_SKILL_DIR/skill-package/skill.json`):
 
 ```jsonc
 {
@@ -137,11 +137,10 @@ To forward requests from Alexa through ngrok to your local machine, you’ll nee
 }
 ```
 
-Next, deploy your skill and interaction model:
+Next, deploy your skill:
 
 ```bash
-$ ask deploy --target skill # deploy skill.json
-$ ask deploy --target model # deploy and build interaction model
+$ ask deploy
 ```
 
 ### 3. Start your debugger
@@ -153,7 +152,7 @@ To debug your skill with VS Code, follow the same instructions above in *[3. Sta
 To invoke your skill, first ensure that it has been enabled for development testing:
 
 ```bash
-$ ask api enable-skill -s <SKILL_ID>
+$ ask smapi set-skill-enablement -s <SKILL_ID>
 ```
 > NOTE: Your skill's ID can be found in the developer console in the **Build** tab, in the **Endpoint** section from the sidebar
 

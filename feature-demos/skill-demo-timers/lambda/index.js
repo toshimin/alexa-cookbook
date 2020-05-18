@@ -147,9 +147,6 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        let response = verifyConsentToken(handlerInput);
-        if(response)
-            return response;
         const speechOutput = handlerInput.t('WELCOME_MSG');
         return handlerInput.responseBuilder
             .speak(speechOutput)
@@ -164,7 +161,7 @@ const ReadTimerIntentHandler = {
             && handlerInput.requestEnvelope.request.intent.name === 'ReadTimerIntent';
     },
     async handle(handlerInput) {
-        const {requestEnvelope, attributesManager, serviceClientFactory} = handlerInput;
+        const {attributesManager, serviceClientFactory} = handlerInput;
         const sessionAttributes = attributesManager.getSessionAttributes();
         let timerId = sessionAttributes['lastTimerId'];
 
@@ -176,7 +173,7 @@ const ReadTimerIntentHandler = {
             const preText = totalCount ? handlerInput.t('TIMER_COUNT_MSG', {count: totalCount}) : '';
             if(timerId || totalCount > 0) {
                 timerId = timerId ? timerId : timersList.timers[0].id; 
-                timerResponse = await timerServiceClient.getTimer(timerId);       
+                let timerResponse = await timerServiceClient.getTimer(timerId);       
                 console.log('Read timer: ' + JSON.stringify(timerResponse));
                 const timerStatus = timerResponse.status;
                 return handlerInput.responseBuilder
@@ -191,10 +188,27 @@ const ReadTimerIntentHandler = {
             }
         } catch (error) {
             console.log('Read timer error: ' + JSON.stringify(error));
-            return handlerInput.responseBuilder
-                        .speak(handlerInput.t('READ_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
-                        .reprompt(handlerInput.t('REPROMPT_MSG'))
-                        .getResponse();
+            if(error.statusCode === 401) {
+                console.log('Unauthorized!');
+                // we send a request to enable by voice
+                // note that you'll need another handler to process the result, see AskForResponseHandler
+                return handlerInput.responseBuilder
+                    .addDirective({
+                    type: 'Connections.SendRequest',
+                    'name': 'AskFor',
+                    'payload': {
+                        '@type': 'AskForPermissionsConsentRequest',
+                        '@version': '1',
+                        'permissionScope': TIMERS_PERMISSION
+                    },
+                    token: 'verifier'
+                }).getResponse();
+            }
+            else
+                return handlerInput.responseBuilder
+                            .speak(handlerInput.t('READ_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
+                            .reprompt(handlerInput.t('REPROMPT_MSG'))
+                            .getResponse();
         }
     }
 }
@@ -206,7 +220,6 @@ const SetTimerIntentHandler = {
     },
     async handle(handlerInput) {
         const {requestEnvelope, attributesManager, serviceClientFactory} = handlerInput;
-        verifyConsentToken(handlerInput);
         const duration = Alexa.getSlotValue(requestEnvelope, 'duration');
 
         const timer = TIMER_FUNCTION(handlerInput, duration);
@@ -235,10 +248,27 @@ const SetTimerIntentHandler = {
                 
         } catch (error) {
             console.log('Create timer error: ' + JSON.stringify(error));
-            return handlerInput.responseBuilder
-                    .speak(handlerInput.t('CREATE_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
-                    .reprompt(handlerInput.t('REPROMPT_MSG'))
-                    .getResponse();
+            if(error.statusCode === 401) {
+                console.log('Unauthorized!');
+                // we send a request to enable by voice
+                // note that you'll need another handler to process the result, see AskForResponseHandler
+                return handlerInput.responseBuilder
+                    .addDirective({
+                    type: 'Connections.SendRequest',
+                    'name': 'AskFor',
+                    'payload': {
+                        '@type': 'AskForPermissionsConsentRequest',
+                        '@version': '1',
+                        'permissionScope': TIMERS_PERMISSION
+                    },
+                    token: 'verifier'
+                }).getResponse();
+            }
+            else
+                return handlerInput.responseBuilder
+                        .speak(handlerInput.t('CREATE_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
+                        .reprompt(handlerInput.t('REPROMPT_MSG'))
+                        .getResponse();
         }
     }
 };
@@ -260,7 +290,7 @@ const DeleteTimerIntentHandler = {
             const totalCount = timersList.totalCount;
             if(totalCount === 0) {
                 return handlerInput.responseBuilder
-                    .speak(preText + handlerInput.t('NO_TIMER_MSG') + handlerInput.t('REPROMPT_MSG'))
+                    .speak(handlerInput.t('NO_TIMER_MSG') + handlerInput.t('REPROMPT_MSG'))
                     .reprompt(handlerInput.t('REPROMPT_MSG'))
                     .getResponse();
             }
@@ -277,10 +307,27 @@ const DeleteTimerIntentHandler = {
                 .getResponse();
         } catch (error) {
             console.log('Delete timer error: ' + JSON.stringify(error));
-            return handlerInput.responseBuilder
-                .speak(handlerInput.t('DELETE_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
-                .reprompt(handlerInput.t('REPROMPT_MSG'))
-                .getResponse();
+            if(error.statusCode === 401) {
+                console.log('Unauthorized!');
+                // we send a request to enable by voice
+                // note that you'll need another handler to process the result, see AskForResponseHandler
+                return handlerInput.responseBuilder
+                    .addDirective({
+                    type: 'Connections.SendRequest',
+                    'name': 'AskFor',
+                    'payload': {
+                        '@type': 'AskForPermissionsConsentRequest',
+                        '@version': '1',
+                        'permissionScope': TIMERS_PERMISSION
+                    },
+                    token: 'verifier'
+                }).getResponse();
+            }
+            else
+                return handlerInput.responseBuilder
+                    .speak(handlerInput.t('DELETE_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
+                    .reprompt(handlerInput.t('REPROMPT_MSG'))
+                    .getResponse();
         }
     }
 }
@@ -301,26 +348,43 @@ const PauseTimerIntentHandler = {
 
             if(totalCount === 0) {
                 return handlerInput.responseBuilder
-                    .speak(preText + handlerInput.t('NO_TIMER_MSG') + handlerInput.t('REPROMPT_MSG'))
+                    .speak(handlerInput.t('NO_TIMER_MSG') + handlerInput.t('REPROMPT_MSG'))
                     .reprompt(handlerInput.t('REPROMPT_MSG'))
                     .getResponse();
             }
             // pauses all timers
-            timersList.timers.forEach(async (timer) => {
+            for(const timer of timersList.timers ) {
                 if(timer.status === 'ON'){
                     await timerServiceClient.pauseTimer(timer.id);
                 }
-            });
+            };
             return handlerInput.responseBuilder
                 .speak(handlerInput.t('PAUSE_TIMER_OK_MSG') + handlerInput.t('REPROMPT_MSG'))
                 .reprompt(handlerInput.t('REPROMPT_MSG'))
                 .getResponse();
         } catch (error) {
             console.log('Pause timer error: ' + JSON.stringify(error));
-            return handlerInput.responseBuilder
-                .speak(handlerInput.t('PAUSE_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
-                .reprompt(handlerInput.t('REPROMPT_MSG'))
-                .getResponse();
+            if(error.statusCode === 401) {
+                console.log('Unauthorized!');
+                // we send a request to enable by voice
+                // note that you'll need another handler to process the result, see AskForResponseHandler
+                return handlerInput.responseBuilder
+                    .addDirective({
+                    type: 'Connections.SendRequest',
+                    'name': 'AskFor',
+                    'payload': {
+                        '@type': 'AskForPermissionsConsentRequest',
+                        '@version': '1',
+                        'permissionScope': TIMERS_PERMISSION
+                    },
+                    token: 'verifier'
+                }).getResponse();
+            }
+            else
+                return handlerInput.responseBuilder
+                    .speak(handlerInput.t('PAUSE_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
+                    .reprompt(handlerInput.t('REPROMPT_MSG'))
+                    .getResponse();
         }
     }
 }
@@ -341,26 +405,43 @@ const ResumeTimerIntentHandler = {
 
             if(totalCount === 0) {
                 return handlerInput.responseBuilder
-                    .speak(preText + handlerInput.t('NO_TIMER_MSG') + handlerInput.t('REPROMPT_MSG'))
+                    .speak(handlerInput.t('NO_TIMER_MSG') + handlerInput.t('REPROMPT_MSG'))
                     .reprompt(handlerInput.t('REPROMPT_MSG'))
                     .getResponse();
             }
-            // pauses all timers
-            timersList.timers.forEach(async (timer) => {
+            // resumes all timers
+            for(const timer of timersList.timers ) {
                 if(timer.status === 'PAUSED'){
                     await timerServiceClient.resumeTimer(timer.id);
                 }
-            });
+            };
             return handlerInput.responseBuilder
                 .speak(handlerInput.t('RESUME_TIMER_OK_MSG') + handlerInput.t('REPROMPT_MSG'))
                 .reprompt(handlerInput.t('REPROMPT_MSG'))
                 .getResponse();
         } catch (error) {
             console.log('Resume timer error: ' + JSON.stringify(error));
-            return handlerInput.responseBuilder
-                .speak(handlerInput.t('RESUME_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
-                .reprompt(handlerInput.t('REPROMPT_MSG'))
-                .getResponse();
+            if(error.statusCode === 401) {
+                console.log('Unauthorized!');
+                // we send a request to enable by voice
+                // note that you'll need another handler to process the result, see AskForResponseHandler
+                return handlerInput.responseBuilder
+                    .addDirective({
+                    type: 'Connections.SendRequest',
+                    'name': 'AskFor',
+                    'payload': {
+                        '@type': 'AskForPermissionsConsentRequest',
+                        '@version': '1',
+                        'permissionScope': TIMERS_PERMISSION
+                    },
+                    token: 'verifier'
+                }).getResponse();
+            }
+            else
+                return handlerInput.responseBuilder
+                    .speak(handlerInput.t('RESUME_TIMER_ERROR_MSG') + handlerInput.t('REPROMPT_MSG'))
+                    .reprompt(handlerInput.t('REPROMPT_MSG'))
+                    .getResponse();
         }
     }
 }
@@ -402,9 +483,17 @@ const AskForResponseHandler = {
         if (status.code === '400') {
             console.log('You forgot to specify the permission in the skill manifest!')
         }
-
+        // TODO There seems to be a bug right now that makes the server return a 500
+        // but the permission is effectively enabled
+        // remove the whole "if" block below when this is fixed
+        if (status.code === '500') {
+            return handlerInput.responseBuilder
+                .speak(handlerInput.t('VOICE_PERMISSION_ACCEPTED') + handlerInput.t('REPROMPT_MSG'))
+                .reprompt(handlerInput.t('REPROMPT_MSG'))
+                .getResponse();
+        }
         // Something failed.
-        console.log(`Connections.Response indicated failure. error: ${request.status.message}`);
+        console.log(`Connections.Response.AskFor indicated failure. error: ${request.status.message}`);
 
         return handlerInput.responseBuilder
             .speak(handlerInput.t('VOICE_PERMISSION_ERROR') + handlerInput.t('GOODBYE_MSG'))
