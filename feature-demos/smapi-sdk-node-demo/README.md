@@ -1,4 +1,4 @@
-# Alexa Skills Management API (SMAPI) SDK　のデモ (Node.js) 
+# Alexa Skills Management API (SMAPI) SDK のデモ (Node.js) 
 このデモでは、Alexa Skills Management API SDKを使ってNode.jsプロジェクトを設定し、[Alexa Skill Metrics API](https://developer.amazon.com/ja-JP/docs/alexa/smapi/metrics-api.html/)を使って開発者(vendor ID)が保有するスキルを一覧表示したり、レポートデータを取得したりするためのサンプルAPIコールを実行する方法を紹介します。
 
 ## 前提要件
