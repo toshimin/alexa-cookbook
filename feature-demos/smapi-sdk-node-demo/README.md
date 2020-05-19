@@ -2,9 +2,9 @@
 このデモでは、Alexa Skills Management API SDKを使ってNode.jsプロジェクトを設定し、[Alexa Skill Metrics API](https://developer.amazon.com/ja-JP/docs/alexa/smapi/metrics-api.html/)を使って開発者(vendor ID)が保有するスキルを一覧表示したり、レポートデータを取得したりするためのサンプルAPIコールを実行する方法を紹介します。
 
 ## 前提要件
-* Node.js and NPM (https://nodejs.com)
-* An Amazon Developer Account (https://developer.amazon.com)
-* The ASK CLI (https://www.npmjs.com/package/ask-cli)
+* Node.js と NPM (https://nodejs.com)
+* Amazon開発者アカウント (https://developer.amazon.com)
+* ASK CLI (https://www.npmjs.com/package/ask-cli)
 
 ## セットアップ
 前提要件のセットアップが完了したら、認可情報を取得する必要があります。これには3つのステップがあります。
