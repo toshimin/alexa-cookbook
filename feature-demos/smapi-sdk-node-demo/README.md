@@ -40,8 +40,8 @@ LWAのセキュリティプロファイルを作成したら、クライアン�
 ```
 
 この後のデモで利用できるように、アクセストークンとリフレッシュトークンの文字列をコピーし、tokens.js ファイルの該当部分に追加してください。
-ASK CLI の generate-lwa-tokens サブコマンドの紹介はこちらの[技術文書](https://developer.amazon.com/ja-JP/docs/alexa/smapi/get-access-token-smapi.html#client-only))を参照してください。
 
+ASK CLI の generate-lwa-tokens サブコマンドの詳細についてはこちらの[技術文書](https://developer.amazon.com/ja-JP/docs/alexa/smapi/get-access-token-smapi.html#client-only))を参照してください。
 
 ## デモの実行
 
