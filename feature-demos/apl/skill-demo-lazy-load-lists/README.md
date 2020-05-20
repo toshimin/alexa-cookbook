@@ -36,6 +36,6 @@ Alexa Hosted-Skillsを利用する場合は、以下の手順に従ってくだ�
 このサンプルスキルでは、非常に数の多いアイテム（色）のセットをページャーやシーケンスコンポーネントの中に表示しています。ヘッダーで *ページャ* か *シーケンス* を選択することで、ドキュメントで使われているコンポーネントを切り替えることができます。指で画面をタッチしてスクロールすると、次々とリストの他の項目が読み込まれます。ここ部分は、 `LoadIndexListDataRequestHandler`ハンドラーの中で、新しいディレクティブ [Alexa.Presentation.APL.SendIndexListData](https://developer.amazon.com/ja-JP/docs/alexa/alexa-presentation-language/apl-interface.html#sendindexlistdata-directive) を使って実装しています。
 
 
-このサンプルスキルでは、APLエラーハンドラー`APLRuntimeErrorHandler`のデモも含まれています。これは、当れ足いリクエストタイプ [Alexa.Presentation.APL.RuntimeError](https://developer.amazon.com/ja-JP/docs/alexa/alexa-presentation-language/apl-interface.html#runtimeerror-request) を実装しています。
+このサンプルスキルでは、APLエラーハンドラー`APLRuntimeErrorHandler`のデモも含まれています。これは、新しいリクエストタイプ [Alexa.Presentation.APL.RuntimeError](https://developer.amazon.com/ja-JP/docs/alexa/alexa-presentation-language/apl-interface.html#runtimeerror-request) を実装しています。
 
 カラーリストを変更したい場合や、対話モデルがどのように作成されているか、コードの中身や解説を知りたい場合は、build ディレクトリの中のREADMEをチェックしてください。
